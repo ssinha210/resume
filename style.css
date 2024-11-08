@@ -9,13 +9,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #003366; /* Dark Blue */
-    padding: 15px 0;
+    background-color: #003366;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,25 +23,23 @@ nav {
     top: 0;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add slight shadow for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav .logo {
     font-size: 24px;
     font-weight: 600;
     color: white;
-    margin-left: 20px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in;
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
+/* Navbar Links */
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -50,328 +48,49 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00aaff; /* Light Blue */
+    color: #00aaff;
 }
 
-/* Home Section */
-#home {
-    background-color: #003366; /* Dark Blue */
+/* Mobile Menu Button */
+.menu-icon {
+    display: none;
+    font-size: 24px;
     color: white;
-    text-align: center;
-    padding-top: 120px; /* Adjust padding to prevent overlap with navbar */
-    padding-bottom: 80px;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    cursor: pointer;
 }
 
-#home h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-#home p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-#home .scroll-link {
-    text-decoration: none;
-    color: #00aaff; /* Light Blue */
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#home .scroll-link:hover {
-    text-decoration: underline;
-}
-
-/* Section Styles */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-    min-height: 100vh; /* Full height for each section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Centering Titles and Containers */
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #003366; /* Dark Blue */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* About Section */
-#about {
-    background-color: white;
-    color: #333;
-}
-
-/* Skills Section */
-#skills {
-    background-color: #f1f1f1;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.skill {
-    width: 22%;
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    cursor: pointer; /* Make it appear clickable */
-}
-
-.skill:hover {
-    transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-
-.skill h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.skill p {
-    font-size: 16px;
-}
-
-/* Experience Section */
-#experience {
-    background-color: white;
-}
-
-.experience-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.job-box {
-    width: 48%;
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    cursor: pointer; /* Make it appear clickable */
-}
-
-.job-box:hover {
-    transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-
-.job-box h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.job-box h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.job-box p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.job-box ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.job-box ul li {
-    font-size: 16px;
-}
-
-/* Projects Section */
-#projects {
-    background-color: #f1f1f1;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.project-box {
-    width: 48%;
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    cursor: pointer; /* Make it appear clickable */
-}
-
-.project-box:hover {
-    transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-
-.project-box h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.project-box p {
-    font-size: 16px;
-}
-
-.project-box a {
-    text-decoration: none;
-    color: white; /* Ensure link text is visible */
-}
-
-.project-box:hover a {
-    color: #00aaff; /* Light Blue when hovered */
-}
-
-/* Contact Section */
-#contact {
-    background-color: white;
-    color: #333;
-    padding: 50px 20px; /* Ensure padding for top and bottom */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Contact Info Layout */
-.contact-info {
-    display: flex;
-    justify-content: space-around;  /* Distribute items evenly across the row */
-    flex-wrap: wrap;  /* Ensure items wrap in small screens */
-    width: 100%;
-    margin-top: 20px;
-}
-
-.contact-item {
-    width: 22%;
-    min-width: 220px; /* Ensure a minimum width */
-    margin: 10px;
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1; /* Light grey background */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-}
-
-.contact-item:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.contact-item i {
-    font-size: 40px;  /* Larger icons */
-    margin-bottom: 10px;
-    color: #003366; /* Dark Blue */
-}
-
-.contact-item p {
-    font-size: 16px;
-}
-
-.contact-item a {
-    text-decoration: none;
-    color: #003366; /* Dark Blue */
-    font-weight: bold;
-}
-
-.contact-item a:hover {
-    color: #00aaff; /* Light Blue */
-}
-
-.profile-img {
-    width: 200px; /* Set a base size for the image */
-    height: 200px; /* Ensure the height matches the width for a square image */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    margin-bottom: 20px; /* Add space below the image */
-}
-
-
-/* Footer */
-footer {
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Responsive Styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .skills-container, .experience-container, .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill, .job-box, .project-box {
-        width: 80%;
-    }
-
     nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0; /* Hide links initially */
+        overflow: hidden;
         flex-direction: column;
-        align-items: center;
+        background-color: #003366;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    nav ul.show {
+        max-height: 300px; /* Show links when menu is open */
     }
 
     nav ul li {
-        margin: 10px 0;
-    }
-    .profile-img {
-        width: 150px; /* Reduce size for smaller screens */
-        height: 150px; /* Maintain square aspect ratio */
+        text-align: center;
+        width: 100%;
     }
 
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-item {
-        width: 80%;
-        margin: 10px 0;
+    .menu-icon {
+        display: block;
     }
 }
+
+/* JavaScript to Toggle Menu */
+<script>
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    document.querySelector('nav ul').classList.toggle('show');
+});
+</script>
