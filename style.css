@@ -88,9 +88,5 @@ nav ul li a:hover {
     }
 }
 
-/* JavaScript to Toggle Menu */
-<script>
-document.querySelector('.menu-icon').addEventListener('click', () => {
-    document.querySelector('nav ul').classList.toggle('show');
-});
-</script>
+
+
