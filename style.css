@@ -11,6 +11,7 @@ body {
     color: #333;
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
+
 .resume-btn {
     display: inline-block;          /* Makes it behave like a button */
     background-color: #003366;      /* Button background color */
