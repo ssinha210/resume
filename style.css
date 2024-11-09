@@ -337,9 +337,10 @@ button, .prev-btn, .next-btn {
     }
 
     .social-icons a {
-        margin: 8px;
-        font-size: 18px;
-    }
+    font-size: 32px; /* Increased from 24px to make them larger */
+    margin: 0 20px;
+}
+
 
     h2 {
         font-size: 1.6rem;
@@ -353,4 +354,24 @@ button, .prev-btn, .next-btn {
     .contact-info p {
         font-size: 0.9rem;
     }
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    padding: 0 20px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+}
+.skill {
+    transition: transform 0.3s, box-shadow 0.3s; /* Adding transition for smooth effect */
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slight lift effect on hover */
 }
