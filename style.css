@@ -12,6 +12,27 @@ body {
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
+/* Button Styles */
+.next-btn, .prev-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    background-color: #00aaff;
+}
+
+/
+
+
 /* Navigation Bar */
 nav {
     background-color: #003366; /* Dark Blue */
