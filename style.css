@@ -13,25 +13,24 @@ body {
 }
 
 /* Button Styles */
-.next-btn, .prev-btn {
+.next-btn, .prev-btn, .resume-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #003366;
-    color: white;
+    background-color: #003366; /* Dark Blue Background */
+    color: white; /* White text */
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
     font-size: 16px;
     font-weight: 600;
-    transition: background-color 0.3s;
+    border: 2px solid white; /* White border */
+    transition: background-color 0.3s, border 0.3s;
 }
 
-.next-btn:hover, .prev-btn:hover {
-    background-color: #00aaff;
+.next-btn:hover, .prev-btn:hover, .resume-link:hover {
+    background-color: #00aaff; /* Light Blue on hover */
+    border: 2px solid #00aaff; /* Light Blue border on hover */
 }
-
-/
-
 
 /* Navigation Bar */
 nav {
