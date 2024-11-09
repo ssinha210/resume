@@ -12,29 +12,10 @@ body {
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-.resume-btn {
-    display: inline-block;          /* Makes it behave like a button */
-    background-color: #003366;      /* Button background color */
-    color: white;                   /* Text color */
-    padding: 10px 20px;             /* Padding inside the button */
-    font-size: 16px;                /* Font size */
-    font-weight: 600;               /* Font weight */
-    border: 2px solid white;       /* White border */
-    text-align: center;             /* Center text */
-    text-decoration: none;          /* Removes underline */
-    border-radius: 5px;             /* Rounded corners */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+a {
+    text-decoration: none;
+    color: inherit;
 }
-
-.resume-btn:hover {
-    background-color: #002244;      /* Darker blue on hover */
-    transform: scale(1.05);          /* Slight scaling effect on hover */
-}
-
-.resume-btn:focus {
-    outline: none;                  /* Removes the outline when focused */
-}
-
 
 /* Button Styles */
 .next-btn, .prev-btn, .resume-link {
@@ -56,45 +37,51 @@ body {
     border: 2px solid #00aaff; /* Light Blue border on hover */
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #003366; /* Dark Blue */
-    padding: 15px 0;
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    background-color: #003366;      /* Button background color */
+    color: white;                   /* Text color */
+    padding: 10px 20px;             /* Padding inside the button */
+    font-size: 16px;                /* Font size */
+    font-weight: 600;               /* Font weight */
+    border: 2px solid white;       /* White border */
+    text-align: center;             /* Center text */
+    text-decoration: none;          /* Removes underline */
+    border-radius: 5px;             /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.resume-btn:hover {
+    background-color: #002244;      /* Darker blue on hover */
+    transform: scale(1.05);          /* Slight scaling effect on hover */
+}
+
+.resume-btn:focus {
+    outline: none;                  /* Removes the outline when focused */
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 100vh; /* Full height for each section */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add slight shadow for better visibility */
+    flex-direction: column;
 }
 
-nav .logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-    margin-left: 20px;
+/* Centering Titles and Containers */
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #003366; /* Dark Blue */
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    color: #00aaff; /* Light Blue */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Home Section */
@@ -130,29 +117,6 @@ nav ul li a:hover {
 
 #home .scroll-link:hover {
     text-decoration: underline;
-}
-
-/* Section Styles */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-    min-height: 100vh; /* Full height for each section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Centering Titles and Containers */
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #003366; /* Dark Blue */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* About Section */
@@ -312,12 +276,6 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Contact Info Layout */
 .contact-info {
     display: flex;
     justify-content: space-around;  /* Distribute items evenly across the row */
@@ -355,67 +313,4 @@ nav ul li a:hover {
 
 .contact-item a {
     text-decoration: none;
-    color: #003366; /* Dark Blue */
-    font-weight: bold;
-}
-
-.contact-item a:hover {
-    color: #00aaff; /* Light Blue */
-}
-
-.profile-img {
-    width: 200px; /* Set a base size for the image */
-    height: 200px; /* Ensure the height matches the width for a square image */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    margin-bottom: 20px; /* Add space below the image */
-}
-
-
-/* Footer */
-footer {
-    background-color: #003366; /* Dark Blue */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .skills-container, .experience-container, .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill, .job-box, .project-box {
-        width: 80%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-    .profile-img {
-        width: 150px; /* Reduce size for smaller screens */
-        height: 150px; /* Maintain square aspect ratio */
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-item {
-        width: 80%;
-        margin: 10px 0;
-    }
-}
+    color: #003366
