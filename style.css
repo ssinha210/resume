@@ -230,3 +230,87 @@ h2 {
 .social-icons a:hover {
     color: #008C8C;
 }
+
+/* Button Styling */
+button, .prev-btn, .next-btn {
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prev-btn {
+    background-color: #04c1c9;
+    padding: 10px 30px;
+    color: white;
+    margin-top: 20px;
+}
+
+.prev-btn:hover {
+    background-color: #008C8C;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .skills-container, .projects-container, .certifications-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certification-card, .job-box, .project-box {
+        padding: 15px;
+    }
+
+    .project-box {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container, .projects-container, .certifications-container {
+        grid-template-columns: 1fr;
+    }
+
+    .next-btn, .prev-btn {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .resume-btn {
+        width: 100%;
+    }
+
+    #home {
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .next-btn, .prev-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-link {
+        font-size: 1.1rem;
+    }
+}
