@@ -253,6 +253,10 @@ h2 {
     margin: 5px 0;
 }
 
+.contact-info i {
+    margin-right: 10px;
+}
+
 /* Button Styling */
 button, .prev-btn, .next-btn {
     font-size: 14px;
@@ -318,27 +322,38 @@ button, .prev-btn, .next-btn {
     h2 {
         font-size: 1.8rem;
     }
+
+    .social-icons a {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .next-btn, .prev-btn {
-        font-size: 14px;
-        padding: 8px 20px;
+        font-size: 16px;
+        padding: 12px;
     }
 
-    h1 {
-        font-size: 1.6rem;
+    .social-icons a {
+        margin: 8px;
+        font-size: 18px;
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
-    .project-box {
-        padding: 10px;
+    .profile-img {
+        width: 120px;
+        height: 120px;
     }
 
-    .project-link {
-        font-size: 1.1rem;
+    .contact-info p {
+        font-size: 0.9rem;
     }
 }
