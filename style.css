@@ -11,6 +11,29 @@ body {
     color: #333;
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
+.resume-btn {
+    display: inline-block;          /* Makes it behave like a button */
+    background-color: #003366;      /* Button background color */
+    color: white;                   /* Text color */
+    padding: 10px 20px;             /* Padding inside the button */
+    font-size: 16px;                /* Font size */
+    font-weight: 600;               /* Font weight */
+    border: 2px solid white;       /* White border */
+    text-align: center;             /* Center text */
+    text-decoration: none;          /* Removes underline */
+    border-radius: 5px;             /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.resume-btn:hover {
+    background-color: #002244;      /* Darker blue on hover */
+    transform: scale(1.05);          /* Slight scaling effect on hover */
+}
+
+.resume-btn:focus {
+    outline: none;                  /* Removes the outline when focused */
+}
+
 
 /* Button Styles */
 .next-btn, .prev-btn, .resume-link {
