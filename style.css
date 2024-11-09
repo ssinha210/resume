@@ -1,72 +1,395 @@
-/* Basic Layout and Style for Sections */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-/* General Section Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Button Styles */
+.next-btn, .prev-btn, .resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366; /* Dark Blue Background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid white; /* White border */
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.next-btn:hover, .prev-btn:hover, .resume-link:hover {
+    background-color: #00aaff; /* Light Blue on hover */
+    border: 2px solid #00aaff; /* Light Blue border on hover */
+}
+
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    background-color: #003366;      /* Button background color */
+    color: white;                   /* Text color */
+    padding: 10px 20px;             /* Padding inside the button */
+    font-size: 16px;                /* Font size */
+    font-weight: 600;               /* Font weight */
+    border: 2px solid white;       /* White border */
+    text-align: center;             /* Center text */
+    text-decoration: none;          /* Removes underline */
+    border-radius: 5px;             /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.resume-btn:hover {
+    background-color: #002244;      /* Darker blue on hover */
+    transform: scale(1.05);          /* Slight scaling effect on hover */
+}
+
+.resume-btn:focus {
+    outline: none;                  /* Removes the outline when focused */
+}
+
+/* Section Styling */
 .section {
-    padding: 40px 20px;
-    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 100vh; /* Full height for each section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Centering Titles and Containers */
+.section h2 {
+    font-size: 30px;
     margin-bottom: 20px;
+    color: #003366; /* Dark Blue */
 }
 
 .container {
-    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h2 {
+/* Home Section */
+#home {
+    background-color: #003366; /* Dark Blue */
+    color: white;
     text-align: center;
+    padding-top: 120px; /* Adjust padding to prevent overlap with navbar */
+    padding-bottom: 80px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#home .scroll-link {
+    text-decoration: none;
+    color: #00aaff; /* Light Blue */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#home .scroll-link:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+#about {
+    background-color: white;
     color: #333;
 }
 
-/* Certifications Card Layout */
+/* Skills Section */
+#skills {
+    background-color: #f1f1f1;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skill {
+    width: 22%;
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    cursor: pointer; /* Make it appear clickable */
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.skill h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 16px;
+}
+
+/* Experience Section */
+#experience {
+    background-color: white;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.job-box {
+    width: 48%;
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    cursor: pointer; /* Make it appear clickable */
+}
+
+.job-box:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.job-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.job-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.job-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.job-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.job-box ul li {
+    font-size: 16px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f1f1f1;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-box {
+    width: 48%;
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    cursor: pointer; /* Make it appear clickable */
+}
+
+.project-box:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.project-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 16px;
+}
+
+.project-box a {
+    text-decoration: none;
+    color: white; /* Ensure link text is visible */
+}
+
+.project-box:hover a {
+    color: #00aaff; /* Light Blue when hovered */
+}
+
+/* Certifications Section */
+#certifications {
+    background-color: white;
+}
+
 .certifications-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .certification-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f7f8fa, #e4e9f2);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.certification-card-header {
+    background-color: #0073e6;
     padding: 20px;
-    width: 250px;
+    color: white;
     text-align: center;
+    font-size: 1.2rem;
 }
 
-.certification-card h3 {
+.certification-card-header h3 {
     margin: 0;
-}
-
-.certification-card a {
-    text-decoration: none;
-    color: #0073e6;
     font-weight: bold;
 }
 
-.certification-card a:hover {
+.certification-card-header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.certification-card-header a:hover {
     text-decoration: underline;
 }
 
-/* Buttons */
-.resume-btn, .next-btn, .prev-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-decoration: none;
-    background-color: #0073e6;
-    color: #fff;
-    border-radius: 5px;
-    text-align: center;
+.certification-card-body {
+    padding: 20px;
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #fff;
 }
 
-.resume-btn:hover, .next-btn:hover, .prev-btn:hover {
-    background-color: #005bb5;
+.certification-card-footer {
+    padding: 15px;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #003366;
+    object-fit: cover;
+}
+
+/* Contact Section */
+#contact {
+    background-color: white;
+    color: #333;
+    padding: 50px 20px; /* Ensure padding for top and bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;  /* Distribute items evenly across the row */
+    flex-wrap: wrap;  /* Ensure items wrap in small screens */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-item {
+    width: 22%;
+    min-width: 220px; /* Ensure a minimum width */
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1; /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.contact-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact-item i {
+    font-size: 40px;  /* Larger icons */
+    margin-bottom: 10px;
+    color: #003366; /* Dark Blue */
+}
+
+.contact-item p {
+    font-size: 16px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #003366; /* Dark Blue */
+}
+
+.contact-item a:hover {
+    color: #00aaff; /* Light Blue when hovered */
 }
