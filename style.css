@@ -322,21 +322,13 @@ a {
     background-color: #fff;
 }
 
-.certification-card-footer {
-    padding: 15px;
-    background-color: #f1f1f1;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #888;
+.certification-card-body ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Profile Image */
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #003366;
-    object-fit: cover;
+.certification-card-body ul li {
+    margin: 10px 0;
 }
 
 /* Contact Section */
@@ -392,4 +384,47 @@ a {
 
 .contact-item a:hover {
     color: #00aaff; /* Light Blue when hovered */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    .skills-container, .experience-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill, .job-box, .project-box, .contact-item {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 10px 0;
+    }
+
+    .certification-card {
+        width: 80%; /* Adjust certification cards on mobile */
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    #home p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .skill, .job-box, .project-box, .contact-item {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .certification-card {
+        width: 100%; /* Full width for certification cards */
+    }
+
+    #home h1 {
+        font-size: 24px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
 }
