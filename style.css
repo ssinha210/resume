@@ -264,17 +264,19 @@ button, .prev-btn, .next-btn {
 /* Mobile Specific Adjustments */
 
 /* Stack sections one after another in mobile view */
+/* Mobile Specific Adjustments */
+
 @media (max-width: 768px) {
     section {
-        height: auto; /* Ensure sections fit content */
-        padding: 60px 20px; /* Adjust section padding */
+        height: 100vh; /* Ensure sections take full viewport height */
+        padding: 40px 15px; /* Reduce section padding for mobile */
     }
 
     .container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
-    /* Adjust content in the skills, projects, and certifications sections to single-column */
+    /* Adjust content in skills, projects, and certifications sections to a single column */
     .skills-container, .projects-container, .certifications-container {
         grid-template-columns: 1fr; /* Stack items in a single column */
     }
@@ -284,37 +286,23 @@ button, .prev-btn, .next-btn {
         height: 150px;
     }
 
-    .resume-btn {
-        width: 100%; /* Make resume button take full width */
+    .resume-btn, .next-btn, .prev-btn {
+        width: 48%; /* Fit two buttons side by side with a small gap */
+        padding: 8px 10px;
+        font-size: 13px;
+        margin-top: 10px;
     }
 
-    #home {
-        padding: 60px 20px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .social-icons a {
-        margin: 10px;
-        font-size: 20px;
-    }
-
-    .contact-info p {
-        font-size: 1rem;
-    }
-
-    .next-btn, .prev-btn {
-        width: 100%; /* Full-width buttons */
+    .resume-btn, .next-btn, .prev-btn {
+        margin-top: 10px;
+        width: 100%; /* Full-width buttons on smaller mobile screens */
     }
 }
 
-/* Further adjustments for very small screens */
 @media (max-width: 480px) {
     .next-btn, .prev-btn {
-        font-size: 16px;
-        padding: 12px;
+        font-size: 14px;
+        padding: 10px;
     }
 
     .social-icons a {
