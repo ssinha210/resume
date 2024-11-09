@@ -15,9 +15,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-/* Sections */
+/* Full-Page Sections */
 section {
-    padding: 60px 20px;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,10 +39,9 @@ h2 {
 
 /* Home Section */
 #home {
-    background-color: #333;
+    background-color: #003366;
     color: white;
     text-align: center;
-    padding: 100px 20px;
 }
 
 .profile-img {
@@ -80,7 +80,7 @@ h2 {
 /* About Section */
 #about {
     background-color: white;
-    color: #333;
+    color: #003366;
 }
 
 #about p {
@@ -94,7 +94,7 @@ h2 {
 /* Skills Section */
 #skills {
     background-color: #f4f4f4;
-    color: #333;
+    color: #003366;
 }
 
 .skills-container {
@@ -120,7 +120,7 @@ h2 {
 /* Experience Section */
 #experience {
     background-color: white;
-    color: #333;
+    color: #003366;
 }
 
 .experience-container {
@@ -143,7 +143,7 @@ h2 {
 /* Projects Section */
 #projects {
     background-color: #f4f4f4;
-    color: #333;
+    color: #003366;
 }
 
 .projects-container {
@@ -178,7 +178,7 @@ h2 {
 /* Certifications Section */
 #certifications {
     background-color: white;
-    color: #333;
+    color: #003366;
 }
 
 .certifications-container {
@@ -217,8 +217,9 @@ h2 {
 
 /* Contact Section */
 #contact {
-    background-color: #04c1c9;
+    background-color: #003366;
     color: white;
+    text-align: center;
 }
 
 .social-icons a {
@@ -228,7 +229,12 @@ h2 {
 }
 
 .social-icons a:hover {
-    color: #008C8C;
+    color: #04c1c9;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
 }
 
 /* Button Styling */
