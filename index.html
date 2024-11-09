@@ -11,16 +11,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-   <section id="home">
-    <div class="home-container">
-        <img src="img.jpg" alt="Sankarshan Sinha" class="profile-img">
-        <h1>Hi, I'm Sankarshan Sinha</h1>
-        <p>Full Stack Java Developer</p>
-        <!-- Resume Link Button with download -->
-        <a href="https://github.com/ssinha210/resume/raw/main/Sankarshan_Sinha_Resume.pdf" class="resume-link" download="Sankarshan_Sinha_Resume.pdf">Download Resume</a>
-    </div>
-    <a href="#about" class="next-btn">Next</a>
-</section>
+  <section id="home">
+        <div class="home-container">
+            <img src="img.jpg" alt="Sankarshan Sinha" class="profile-img">
+            <h1>Hi, I'm Sankarshan Sinha</h1>
+            <p>Full Stack Java Developer</p>
+            <!-- Resume Link Button with download -->
+            <a href="https://github.com/ssinha210/resume/raw/main/Sankarshan_Sinha_Resume.pdf" 
+               class="resume-link" 
+               download="Sankarshan_Sinha_Resume.pdf"
+               style="
+                   display: inline-block;
+                   padding: 12px 25px;
+                   background-color: #007bff; /* Blue background */
+                   color: white; /* White text */
+                   text-decoration: none;
+                   border-radius: 5px;
+                   font-size: 18px;
+                   font-weight: 600;
+                   border: 2px solid white; /* White border */
+                   transition: background-color 0.3s ease, border 0.3s ease;
+               "
+               onmouseover="this.style.backgroundColor='#0056b3'; this.style.border='2px solid #fff';"
+               onmouseout="this.style.backgroundColor='#007bff'; this.style.border='2px solid white';">
+                Download Resume
+            </a>
+        </div>
+        <!-- Next Button -->
+        <a href="#about" class="next-btn" 
+           style="
+               display: inline-block;
+               padding: 10px 20px;
+               background-color: #28a745; /* Green background */
+               color: white;
+               text-decoration: none;
+               border-radius: 5px;
+               font-size: 16px;
+               font-weight: 500;
+               margin-top: 15px;
+               border: 2px solid white; /* White border */
+               transition: background-color 0.3s ease, border 0.3s ease;
+           "
+           onmouseover="this.style.backgroundColor='#218838'; this.style.border='2px solid #fff';"
+           onmouseout="this.style.backgroundColor='#28a745'; this.style.border='2px solid white';">
+            Next
+        </a>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
