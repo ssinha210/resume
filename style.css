@@ -18,12 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Full-Page Sections */
 section {
     padding: 0;
-    height: 100vh;
+    height: auto; /* Adjust this to auto to make sure sections fit their content */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     text-align: center;
+    min-height: 100vh; /* Ensure each section takes up the full viewport height */
+    justify-content: flex-start; /* Align sections from top */
 }
 
 .container {
@@ -104,6 +104,7 @@ h2 {
 #skills {
     background-color: #f4f4f4;
     color: #003366;
+    padding: 80px 20px;
 }
 
 .skills-container {
@@ -118,12 +119,6 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Experience Section */
@@ -180,12 +175,6 @@ h2 {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Certifications Section */
 #certifications {
     background-color: white;
@@ -219,12 +208,6 @@ h2 {
 .certification-card-footer {
     margin-top: 10px;
     font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .certifications-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Contact Section */
@@ -278,32 +261,22 @@ button, .prev-btn, .next-btn {
     color: #003366;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+/* Mobile Specific Adjustments */
+
+/* Stack sections one after another in mobile view */
+@media (max-width: 768px) {
+    section {
+        height: auto; /* Ensure sections fit content */
+        padding: 60px 20px; /* Adjust section padding */
+    }
+
     .container {
         padding: 0 10px;
     }
 
+    /* Adjust content in the skills, projects, and certifications sections to single-column */
     .skills-container, .projects-container, .certifications-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .certification-card, .job-box, .project-box {
-        padding: 15px;
-    }
-
-    .project-box {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-container, .projects-container, .certifications-container {
-        grid-template-columns: 1fr;
-    }
-
-    .next-btn, .prev-btn {
-        width: 100%;
+        grid-template-columns: 1fr; /* Stack items in a single column */
     }
 
     .profile-img {
@@ -312,11 +285,11 @@ button, .prev-btn, .next-btn {
     }
 
     .resume-btn {
-        width: 100%;
+        width: 100%; /* Make resume button take full width */
     }
 
     #home {
-        padding: 80px 20px;
+        padding: 60px 20px;
     }
 
     h2 {
@@ -331,8 +304,13 @@ button, .prev-btn, .next-btn {
     .contact-info p {
         font-size: 1rem;
     }
+
+    .next-btn, .prev-btn {
+        width: 100%; /* Full-width buttons */
+    }
 }
 
+/* Further adjustments for very small screens */
 @media (max-width: 480px) {
     .next-btn, .prev-btn {
         font-size: 16px;
