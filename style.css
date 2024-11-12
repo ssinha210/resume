@@ -375,3 +375,16 @@ button, .prev-btn, .next-btn {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slight lift effect on hover */
 }
+/* Section initial hidden state */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state when in view */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
